@@ -31,7 +31,7 @@ console.log(getMultiplicationNum(num));
 //  Правильно использовать цикл или методы перебора.
 
 // 3) Полученный результат возвести в степень 3, используя только 1 оператор (Math.pow не подходит)
-let powNum = getMultiplicationNum(num) ** 3;
+const powNum = getMultiplicationNum(num) ** 3;
 console.log(powNum);
 
 // 4) Вывести в консоль первые 2 цифры полученного числа
