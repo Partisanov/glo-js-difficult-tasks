@@ -2,6 +2,7 @@
 
 // 1). Переменная lang может принимать 2 значения: 'ru' 'en'.
 let lang = prompt('Выберите язык - введите ru или en');
+let dayNames = new Map();
 const langArray = [["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"],
 ["Monday", "Tuesday", "Wednesday", "Thursdey", "Friday", "Saturday", "Sunday"]];
 
@@ -36,8 +37,10 @@ switch (lang) {
 }
 
 //  c) через многомерный массив без ифов и switch.
+dayNames.set('ru', langArray[0])
+  .set('en', langArray[1]);
 
-console.log(lang === 'ru' ? getArrayElements(langArray[0]) : console.log(getArrayElements(langArray[1])));
+console.log(getArrayElements(dayNames.get(lang)));
 
 // 2). У нас есть переменная namePerson. Если значение этой переменной “Артем” то вывести в консоль “директор”,
 // если значение “Александр” то вывести в консоль “преподаватель”, с любым другим значением вывести в консоль “студент”
