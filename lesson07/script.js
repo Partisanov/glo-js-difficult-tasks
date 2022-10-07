@@ -5,9 +5,9 @@ let week = ["Понедельник", "Вторник", "Среда", "Четв�
 //блок описания функций 
 
 const isToday = (dayName) => {
-    const todayDay = ((6 + new Date().getDay()) % 7);
-    const today = week[todayDay];
-    return (dayName === today) ? true : false;
+    const todayDay = new Date().toLocaleString('ru', { weekday: 'long' });
+    console.log(todayDay);
+    return (dayName.toLowerCase() === todayDay) ? true : false;
 };
 const isWeekend = (dayName) => {
     return (dayName === "Суббота" || dayName === "Воскресенье") ? true : false;
