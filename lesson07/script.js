@@ -6,7 +6,6 @@ let week = ["Понедельник", "Вторник", "Среда", "Четв�
 
 const isToday = (dayName) => {
     const todayDay = new Date().toLocaleString('ru', { weekday: 'long' });
-    console.log(todayDay);
     return (dayName.toLowerCase() === todayDay) ? true : false;
 };
 const isWeekend = (dayName) => {
