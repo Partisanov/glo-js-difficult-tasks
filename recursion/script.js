@@ -10,7 +10,7 @@ const decorateText = () => {
 
     for (let i = 0; i < paragraphs.length; i++) {
         const paragraph = paragraphs.item(i);
-        paragraph.style.color = (colorList[colorNumber]).replace('"', '');
+        paragraph.style.color = (colorList[colorNumber]);
         colorNumber = (colorNumber === (colorList.length - 1)) ? 0 : ++colorNumber;
     }
 };
