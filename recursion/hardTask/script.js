@@ -102,14 +102,16 @@ files.forEach((el) => {
     el.items.forEach((item) => {
         const element = document.createElement(`${item.element}`);
         element.innerHTML = item.text;
-        if (item.element === 'span' || item.element === 'p') {
-            element.style.color = colorList.first;
-        }
-        if (item.element === 'div') {
-            element.style.color = colorList.second;
-        }
-        if (item.element === 'b' || item.element === 'strong') {
-            element.style.color = colorList.third;
+        switch (true) {
+            case (item.element === 'span' || item.element === 'p'):
+                element.style.color = colorList.first;
+                break;
+            case (item.element === 'div'):
+                element.style.color = colorList.second;
+                break;
+            case (item.element === 'b' || item.element === 'strong'):
+                element.style.color = colorList.third;
+                break;
         }
         wrapper.appendChild(element);
     });
